@@ -1,0 +1,40 @@
+﻿@using Shop.Data.Models;
+@* @using Shop.Data.Models
+@model IEnumerable<Car>
+ *@
+
+@* @using Shop.ViewModels
+@model CarsListViewModel *@ 
+
+@* @{
+    Layout = "_Layout";  //Подставляеться внутрь _Layout в реджербади
+}
+ *@
+
+
+    //Выведение обекта Cars
+    <h2>Все автомобили</h2>
+
+
+   @*  <h3>@ViewBag.Category</h3> //Указали где найти *@
+   
+   
+   <h3>@Model.carrCategory</h3>
+    //Подключаем C#
+<div class="row mt-5 mb-2">
+    @{
+
+        // foreach(var car in Model)  //При Data.Models
+        // { 
+        //     <div>
+        //             <h2>Модель: @car.name</h2> //Выводим модель car, а именно name
+        //             <p>Цена: @car.price.ToString("c")</p>
+        //     </div>      
+        // }
+
+
+
+        foreach(Car car in Model.getAllCars)   //При VeiwModels
+            @Html.Partial("AllCars", car)
+    }
+    </div>
