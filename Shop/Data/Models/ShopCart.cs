@@ -1,6 +1,4 @@
-﻿using System.Data.Entity;
-using System.Security.Policy;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Shop.Data.Models
 {
@@ -25,17 +23,17 @@ namespace Shop.Data.Models
 
             session.SetString("CartId", ShopCartId);
 
-            return new ShopCart(context) { ShopCartId = shopCartId };
+            return new ShopCart(context) { ShopCartId = ShopCartId };
         }
 
         //Добовляем товары в карзину 
-        public void AddToCart(Car car, int amout)
+        public void AddToCart(Car car)
         {
             appDBContent.ShopCartItem.Add(new ShopCartItem
             {
                 ShopCatId = ShopCartId,
                 car = car,
-                price = car.price
+                price = car.Price
             });
             appDBContent.SaveChanges();
         }

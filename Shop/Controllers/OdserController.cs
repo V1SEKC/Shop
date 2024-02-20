@@ -1,7 +1,4 @@
-﻿using System.Web.Mvc;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Shop.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using Shop.Data.interfaces;
 using Shop.Data.Models;
 

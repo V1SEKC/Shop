@@ -18,78 +18,78 @@ namespace Shop.Migrations
 
                     new Car
                     {
-                        name = "Tesla Model S",
-                        shortDesc = "Быстрый автомобиль",
-                        longDesc = "Красивый и быстрый, и очень тихий автомобиль компании Tesla",
-                        img = "/img/Тесла.jpg",
-                        price = 45000,
-                        isFavourite = false,
-                        available = true,
-                        Category = Categories["Электромобили"]  //Указываем ключ необходимого элемента
+                        Name = "Tesla Model S",
+                        ShortDesc = "Быстрый автомобиль",
+                        LongDesc = "Красивый и быстрый, и очень тихий автомобиль компании Tesla",
+                        Img = "/img/Тесла.jpg",
+                        Price = 45000,
+                        IsFavourite = false,
+                        Available = true,
+                        Category = Categories["Электромобили"]
                     },
 
 
                     new Car
                     {
-                        name = "Ford Mystang",
-                        shortDesc = "Агрессивный и спортивый",
-                        longDesc = "Агрессивный внешний вид, точно произведет впечетление",
-                        img = "/img/Мустанг.jpg",
-                        price = 30000,
-                        isFavourite = true,
-                        available = true,
+                        Name = "Ford Mystang",
+                        ShortDesc = "Агрессивный и спортивый",
+                        LongDesc = "Агрессивный внешний вид, точно произведет впечетление",
+                        Img = "/img/Мустанг.jpg",
+                        Price = 30000,
+                        IsFavourite = true,
+                        Available = true,
                         Category = Categories["Классические автомобили"]
                     },
 
 
                     new Car
                     {
-                        name = "BMW M4",
-                        shortDesc = "Быстрый автомобиль",
-                        longDesc = "Красивый и быстрый, и очень тихий автомобиль компании Tesla",
-                        img = "/img/БМВ.jpeg",
-                        price = 60000,
-                        isFavourite = false,
-                        available = false,
+                        Name = "BMW M4",
+                        ShortDesc = "Быстрый автомобиль",
+                        LongDesc = "Красивый и быстрый, и очень тихий автомобиль компании Tesla",
+                        Img = "/img/БМВ.jpeg",
+                        Price = 60000,
+                        IsFavourite = false,
+                        Available = false,
                         Category = Categories["Классические автомобили"]
                     },
 
 
                     new Car
                     {
-                        name = "BMW I8",
-                        shortDesc = "Быстрая и невероятная",
-                        longDesc = "Шикарный внешний вид, и дизайн будущего",
-                        img = "/img/I8.jpg",
-                        price = 45000,
-                        isFavourite = true,
-                        available = true,
+                        Name = "BMW I8",
+                        ShortDesc = "Быстрая и невероятная",
+                        LongDesc = "Шикарный внешний вид, и дизайн будущего",
+                        Img = "/img/I8.jpg",
+                        Price = 45000,
+                        IsFavourite = true,
+                        Available = true,
+                        Category = Categories["Электромобили"]
+                    },
+
+
+                    new Car
+                    {
+                        Name = "Porsche Boxster",
+                        ShortDesc = "Красивый и аккуратный",
+                        LongDesc = "Точно привлечет внимание на улицах города",
+                        Img = "/img/Порш.jpg",
+                        Price = 50000,
+                        IsFavourite = false,
+                        Available = true,
                         Category = Categories["Классические автомобили"]
                     },
 
 
                     new Car
                     {
-                        name = "Porsche Boxster",
-                        shortDesc = "Красивый и аккуратный",
-                        longDesc = "Точно привлечет внимание на улицах города",
-                        img = "/img/Порш.jpg",
-                        price = 50000,
-                        isFavourite = false,
-                        available = true,
-                        Category = Categories["Классические автомобили"]
-                    },
-
-
-                    new Car
-                    {
-                        name = "Land Rover Range Rover",
-                        shortDesc = "Дорогой и впечетляющий",
-                        longDesc = "Автомобиль сразу произвелет впечетление на окружение",
-                        img = "/img/Ровер.jpg",
-                        price = 30000,
-                        isFavourite = false,
-                        available = false,
+                        Name = "Land Rover Range Rover",
+                        ShortDesc = "Дорогой и впечетляющий",
+                        LongDesc = "Автомобиль сразу произвелет впечетление на окружение",
+                        Img = "/img/Ровер.jpg",
+                        Price = 30000,
+                        IsFavourite = false,
+                        Available = false,
                         Category = Categories["Классические автомобили"]
                     }
 
@@ -111,14 +111,14 @@ namespace Shop.Migrations
                     //Добовляем новые обекты
                     var list = new Category[]
                     {
-                        new Category { categoryName = "Электромобили", desc = "Современный вид странспорта" },
-                        new Category { categoryName = "Классические автомобили", desc = "Машины с двигателем внутреннего сгорания" }
+                        new Category { CategoryName = "Электромобили", Desc = "Современный вид странспорта" },
+                        new Category { CategoryName = "Классические автомобили", Desc = "Машины с двигателем внутреннего сгорания" }
                     };
 
                     category = new Dictionary<string, Category>();  //Добовляем элементы моссива в нее
 
                     foreach (Category el in list)
-                        category.Add(el.categoryName, el);   //Добовляем новый обект          
+                        category.Add(el.CategoryName, el);   //Добовляем новый обект          
                 }
 
                 return category;

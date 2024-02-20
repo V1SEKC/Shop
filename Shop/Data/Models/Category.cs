@@ -3,9 +3,9 @@
     public class Category  //Модели категорий 
     {
         public int Id { get; set; }
-        public string categoryName { get; set; }
-        public string desc { get; set; } //Описание
-        public List<Car> cars { get; set; } //у каждой категории есть много таваров
+        public string CategoryName { get; set; }
+        public string Desc { get; set; } //Описание
+        public List<Car> Cars { get; set; } //у каждой категории есть много таваров
 
     }
 }

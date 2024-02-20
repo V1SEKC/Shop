@@ -1,16 +1,25 @@
-﻿namespace Shop.Data.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Shop.Data.Models
 {
+    /// <summary>
+    /// Описание товаров
+    /// </summary>
     public class Car  //Опсание товаров
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string shortDesc { get; set; } //Описание длинное
-        public string longDesc { get; set; }  //Описание короткое
-        public string img { get; set; }  //Юрел адрес где будет картинка
-        public ushort price { get; set; } //Со знаком - быть не может цена
-        public bool isFavourite { get; set; }  //Отображение на главной стр true или false
-        public bool available { get; set; }  //Если товар на складе и сколько
-        public int categoryID { get; set; }  //Айди нужной категории. обект категории. Приклепляем товар к нужной категории 
+        /// <summary>
+        /// Идентификатор
+        /// </summary>
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string ShortDesc { get; set; } //Описание длинное
+        public string LongDesc { get; set; }  //Описание короткое
+        public string Img { get; set; }  //Юрел адрес где будет картинка
+        public ushort Price { get; set; } //Со знаком - быть не может цена
+        public bool IsFavourite { get; set; }  //Отображение на главной стр true или false
+        public bool Available { get; set; }  //Если товар на складе и сколько
+        public int CategoryID { get; set; }  //Айди нужной категории. обект категории. Приклепляем товар к нужной категории 
         public virtual Category Category { get; set; }  //У одного товара есть лишь одна категория 
     }
 }

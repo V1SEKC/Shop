@@ -1,7 +1,7 @@
 {
     //Название БД
-    "ConnectionStrings": {
-        "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Shop;Trusted_Connectoin=True;MultipleActiveResultSets=true"
-    }
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Shop;Integrated Security=True;MultipleActiveResultSets=true"
+  }
 
 }

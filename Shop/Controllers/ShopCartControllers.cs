@@ -35,7 +35,7 @@ namespace Shop.Controllers
         //Переодресовывет нас на новую стр, добовляя товары в карзину
         public RedirectToActionResult addToCart(int id)
         {
-            var item = _carRep.Cars.FirstOrDefault(i => i.id == id);//Добовляение товара у которого айди совподает
+            Car item = _carRep.Cars.FirstOrDefault(i => i.Id == id);//Добовляение товара у которого айди совподает
             if (item != null)
                 _shopCart.AddToCart(item);
             return RedirectToAction("Index");

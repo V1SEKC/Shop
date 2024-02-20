@@ -4,7 +4,7 @@ namespace Shop.ViewModels
 {
     public class CarsListViewModel
     {
-        internal IEnumerable<Car> allCars;
+        public IEnumerable<Car> allCars { get; set; }
 
         public IEnumerable<Car> getAllCars { get; set; }
         public string carrCategory { get; set; }

@@ -30,14 +30,14 @@ namespace Shop.Controllers
                 cars = _allCars.Cars.OrderBy(i => i.Id);
             else
             {
-                if (string.Equals("electro", category, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals("электромобили", category))
                 {
-                    cars = _allCars.Cars.Where(i => i.Category.categoryName.Equals("Электромобили")).OrderBy(i => i.Id);
+                    cars = _allCars.Cars.Where(i => i.Category.CategoryName.Equals("Электромобили")).OrderBy(i => i.Id);
                     currCategory = "Электромобили";
                 }
                 else
                 {
-                    cars = _allCars.Cars.Where(i => i.Category.categoryName.Equals("Классические автомобили")).OrderBy(i => i.Id);
+                    cars = _allCars.Cars.Where(i => i.Category.CategoryName.Equals("Классические автомобили")).OrderBy(i => i.Id);
                     currCategory = "Классические автомобили";
                 }
             }
